@@ -12,6 +12,7 @@ public final class Main {
 
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        TriangleClassifier classifier = new TriangleClassifier();
         while (true) {
             System.out.println("Enter three side lengths separated by spaces:");
 
@@ -42,8 +43,8 @@ public final class Main {
             }
 
             try {
-                Triangle triangle = new Triangle(sides.get(0), sides.get(1), sides.get(2));
-                TriangleType type = new TriangleClassifier().classify(triangle);
+                var triangle = new Triangle(sides.get(0), sides.get(1), sides.get(2));
+                var type = classifier.classify(triangle);
                 System.out.println();
                 System.out.println("Triangle type: " + displayName(type));
                 System.out.println();

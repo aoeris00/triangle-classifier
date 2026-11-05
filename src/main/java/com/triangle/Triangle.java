@@ -6,6 +6,13 @@ public final class Triangle {
     private final double sideC;
 
     public Triangle(double sideA, double sideB, double sideC) {
+        if (!Double.isFinite(sideA)
+                || !Double.isFinite(sideB)
+                || !Double.isFinite(sideC)) {
+            throw new IllegalArgumentException(
+                    "Side lengths must be finite numbers."
+            );
+        }
         if (sideA <= 0 || sideB <= 0 || sideC <= 0) {
             throw new IllegalArgumentException("All side lengths must be greater than zero.");
         }
