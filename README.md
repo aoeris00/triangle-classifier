@@ -42,7 +42,7 @@ Other examples:
 
 - Input `3 3 5` displays `Triangle type: Isosceles`.
 - Input `3 4 5` displays `Triangle type: Scalene`.
-- Invalid input displays a clear error and exits.
+- Invalid input displays a clear error message.
 
 ## Project structure
 
